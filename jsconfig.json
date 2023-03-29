@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "api": ["./src/api"],
+      "api/*": ["./src/api/*"],
+      "components": ["./src/components"],
+      "components/*": ["./src/components/*"],
+      "pages": ["./src/pages"],
+      "pages/*": ["./src/pages/*"],
+      "images/*": ["./src/assets/images/*"],
+      "icons/*": ["./src/assets/icons/*"]
+    }
+  },
+  "exclude": ["node_modules", "dist", "build"]
+}
