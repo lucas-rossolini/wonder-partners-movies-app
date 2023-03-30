@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 
+import Searchbar from "../components/inputs/Searchbar";
+
 const Home = function Home() {
   const [moviesList, setMoviesList] = useState([]);
 
@@ -25,6 +27,7 @@ const Home = function Home() {
   return (
     <>
       <h1 className="mt-11 ml-6">What do you want to watch?</h1>
+      <Searchbar />
     </>
   );
 };
