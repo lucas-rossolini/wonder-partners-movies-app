@@ -1,17 +1,40 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 
-import { Header, Footer } from "../components";
+import Searchbar from "../components/inputs/Searchbar";
+import HorizontalCards from "../components/lists/HorizontalCards";
 
-const Home = () => (
-  <>
-    <Header />
+const Home = function Home() {
+  const [moviesList, setMoviesList] = useState([]);
 
-    <main className="home">
-      <h1>Home page here</h1>
-    </main>
+  useEffect(() => {
+    axios
+      .get(
+        "https://europe-west1-movie-api-recruitment.cloudfunctions.net/movies"
+      )
+      .then((response) => {
+        setMoviesList(response.data);
+      })
+      .catch((error) => console.error(error));
+  }, []);
 
-    <Footer />
-  </>
-);
+  const moviesShortList = [];
+  const sortedList = moviesList.sort((a, b) => b.date - a.date);
+
+  if (sortedList[0] !== undefined) {
+    for (let i = 0; i <= 3; i += 1) {
+      sortedList[i].id = i + 1;
+      moviesShortList.push(sortedList[i]);
+    }
+  }
+  console.log(moviesShortList);
+  return (
+    <>
+      <h1 className="mt-11 ml-6">What do you want to watch?</h1>
+      <Searchbar />
+      <HorizontalCards list={moviesShortList} />
+    </>
+  );
+};
 
 export default Home;
