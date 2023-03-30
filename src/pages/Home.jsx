@@ -5,6 +5,8 @@ import Searchbar from "../components/inputs/Searchbar";
 import HorizontalCards from "../components/lists/HorizontalCards";
 import VerticalCards from "../components/lists/VerticalCards";
 
+import defaultPic from "../assets/images/default-movie.png"
+
 const Home = function Home() {
   const [moviesList, setMoviesList] = useState([]);
 
@@ -32,8 +34,8 @@ const Home = function Home() {
     <>
       <h1 className="mt-11 ml-6">What do you want to watch?</h1>
       <Searchbar />
-      <HorizontalCards list={moviesShortList} />
-      <VerticalCards list={moviesList} />
+      <HorizontalCards list={moviesShortList} defaultPic={defaultPic} />
+      <VerticalCards list={moviesList} defaultPic={defaultPic} />
     </>
   );
 };

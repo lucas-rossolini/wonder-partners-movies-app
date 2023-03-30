@@ -1,6 +1,9 @@
 import React from "react";
 
-const BigCard = function BigCard({ movie, num }) {
+const BigCard = function BigCard({ movie, num, defaultPic }) {
+  function addDefaultPic(e){
+    e.target.src=defaultPic
+  }
   return (
     <div className="flex flex-col-reverse relative pr-7 mt-5">
       <div className="absolute">
@@ -10,6 +13,7 @@ const BigCard = function BigCard({ movie, num }) {
         className="w-auto h-52 max-w-xs overflow-hidden rounded-2xl shadow-md bg-white hover:shadow-xl transition-shadow duration-300 ease-in-out"
         src={movie.thumbnail}
         alt={`${movie.title} thumbnail`}
+        onError={addDefaultPic}
       />
     </div>
   );
