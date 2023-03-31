@@ -3,6 +3,10 @@ import axios from "axios";
 
 import Searchbar from "../components/inputs/Searchbar";
 import HorizontalCards from "../components/lists/HorizontalCards";
+import VerticalCards from "../components/lists/VerticalCards";
+import Modal from "../components/modals/Modal";
+
+import defaultPic from "../assets/images/default-movie.png";
 
 const Home = function Home() {
   const [moviesList, setMoviesList] = useState([]);
@@ -18,21 +22,56 @@ const Home = function Home() {
       .catch((error) => console.error(error));
   }, []);
 
-  const moviesShortList = [];
-  const sortedList = moviesList.sort((a, b) => b.date - a.date);
+  let moviesShortList = [];
+  const sortedList = JSON.parse(JSON.stringify(moviesList));
+  sortedList.sort((a, b) => b.date - a.date);
 
   if (sortedList[0] !== undefined) {
-    for (let i = 0; i <= 3; i += 1) {
-      sortedList[i].id = i + 1;
-      moviesShortList.push(sortedList[i]);
-    }
+    moviesShortList = sortedList.slice(0, 4);
   }
-  console.log(moviesShortList);
+
+  const [modal, setModal] = useState({
+    data: null,
+    type: "",
+    show: false,
+  });
+
+  const showModal = (itemPopup, modalType) => {
+    setModal({
+      data: itemPopup,
+      type: modalType,
+      show: true,
+    });
+  };
+
+  const bgHideModal = () => {
+    setModal({
+      data: null,
+      type: "",
+      show: false,
+    });
+  };
+
   return (
     <>
       <h1 className="mt-11 ml-6">What do you want to watch?</h1>
-      <Searchbar />
-      <HorizontalCards list={moviesShortList} />
+      <div onClick={() => showModal(moviesList, "Search")}>
+        <Searchbar />
+      </div>
+      <HorizontalCards
+        list={moviesShortList}
+        defaultPic={defaultPic}
+        showModal={showModal}
+      />
+      <VerticalCards
+        list={moviesList}
+        defaultPic={defaultPic}
+        showModal={showModal}
+      />
+
+      {modal.show ? (
+        <Modal item={modal} bgHide={bgHideModal} defaultPic={defaultPic} showModal={showModal} />
+      ) : null}
     </>
   );
 };
