@@ -6,7 +6,7 @@ import HorizontalCards from "../components/lists/HorizontalCards";
 import VerticalCards from "../components/lists/VerticalCards";
 import Modal from "../components/modals/Modal";
 
-import defaultPic from "../assets/images/default-movie.png"
+import defaultPic from "../assets/images/default-movie.png";
 
 const Home = function Home() {
   const [moviesList, setMoviesList] = useState([]);
@@ -32,13 +32,14 @@ const Home = function Home() {
 
   const [modal, setModal] = useState({
     data: null,
+    type: "",
     show: false,
   });
 
-  const showModal = (itemPopup) => {
-    console.log(itemPopup);
+  const showModal = (itemPopup, modalType) => {
     setModal({
       data: itemPopup,
+      type: modalType,
       show: true,
     });
   };
@@ -46,21 +47,31 @@ const Home = function Home() {
   const bgHideModal = () => {
     setModal({
       data: null,
+      type: "",
       show: false,
     });
   };
 
-  console.log(moviesList);
   return (
     <>
       <h1 className="mt-11 ml-6">What do you want to watch?</h1>
-      <Searchbar />
-      <HorizontalCards list={moviesShortList} defaultPic={defaultPic} showModal={showModal} />
-      <VerticalCards list={moviesList} defaultPic={defaultPic} showModal={showModal} />
+      <div onClick={() => showModal(moviesList, "Search")}>
+        <Searchbar />
+      </div>
+      <HorizontalCards
+        list={moviesShortList}
+        defaultPic={defaultPic}
+        showModal={showModal}
+      />
+      <VerticalCards
+        list={moviesList}
+        defaultPic={defaultPic}
+        showModal={showModal}
+      />
 
       {modal.show ? (
-          <Modal item={modal} bgHide={bgHideModal} defaultPic={defaultPic} />
-        ) : null}
+        <Modal item={modal} bgHide={bgHideModal} defaultPic={defaultPic} />
+      ) : null}
     </>
   );
 };

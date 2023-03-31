@@ -9,7 +9,7 @@ const HorizontalCards = function HorizontalCards({list, defaultPic, showModal}) 
           {list.length > 0 && list[0] !== undefined
             ? list.map((movie, i) => (
                 <div key={i+1} className="flex">
-                  <BigCard movie={movie} num={i+1} defaultPic={defaultPic} onClick={() => showModal(movie)} />
+                  <BigCard movie={movie} num={i+1} defaultPic={defaultPic} onClick={() => showModal(movie, "Details")} />
                 </div>
               ))
             : ""}

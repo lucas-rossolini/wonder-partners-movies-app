@@ -9,7 +9,7 @@ const VerticalCards = function VerticalCards({list, defaultPic, showModal}) {
           {list.length > 0 && list[0] !== undefined
             ? list.map((movie, i) => (
                 <div key={i} className="flex">
-                  <SmallCard movie={movie} defaultPic={defaultPic} onClick={() => showModal(movie)} />
+                  <SmallCard movie={movie} defaultPic={defaultPic} onClick={() => showModal(movie, "Details")} />
                 </div>
               ))
             : ""}
