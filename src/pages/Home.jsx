@@ -4,6 +4,7 @@ import axios from "axios";
 import Searchbar from "../components/inputs/Searchbar";
 import HorizontalCards from "../components/lists/HorizontalCards";
 import VerticalCards from "../components/lists/VerticalCards";
+import Modal from "../components/modals/Modal";
 
 import defaultPic from "../assets/images/default-movie.png"
 
@@ -29,13 +30,37 @@ const Home = function Home() {
     moviesShortList = sortedList.slice(0, 4);
   }
 
+  const [modal, setModal] = useState({
+    data: null,
+    show: false,
+  });
+
+  const showModal = (itemPopup) => {
+    console.log(itemPopup);
+    setModal({
+      data: itemPopup,
+      show: true,
+    });
+  };
+
+  const bgHideModal = () => {
+    setModal({
+      data: null,
+      show: false,
+    });
+  };
+
   console.log(moviesList);
   return (
     <>
       <h1 className="mt-11 ml-6">What do you want to watch?</h1>
       <Searchbar />
-      <HorizontalCards list={moviesShortList} defaultPic={defaultPic} />
-      <VerticalCards list={moviesList} defaultPic={defaultPic} />
+      <HorizontalCards list={moviesShortList} defaultPic={defaultPic} showModal={showModal} />
+      <VerticalCards list={moviesList} defaultPic={defaultPic} showModal={showModal} />
+
+      {modal.show ? (
+          <Modal item={modal} bgHide={bgHideModal} defaultPic={defaultPic} />
+        ) : null}
     </>
   );
 };

@@ -1,12 +1,12 @@
 import React from "react";
 
-const BigCard = function BigCard({ movie, num, defaultPic }) {
+const BigCard = function BigCard({ movie, num, defaultPic, onClick }) {
   function addDefaultPic(e){
     e.target.src=defaultPic
   }
   return (
-    <div className="flex flex-col-reverse relative pr-7 mt-5">
-      <div className="absolute">
+    <div className="flex flex-col-reverse relative pr-7 mt-5" onClick={() => onClick()}>
+      <div className="absolute" >
         <div className="relative text-8xl top-8 right-3 font-semibold w-full h-full stroke text-DarkGray drop-shadow">{num}<div className="absolute text-DarkGray w-full top-0 no-stroke">{num}</div> </div>
       </div>
       <img
