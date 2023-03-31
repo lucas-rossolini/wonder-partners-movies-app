@@ -6,19 +6,6 @@
   Check the base if you want
 -->
 
-<!-- Replace this with yours -->
-<!--
-github_username
-repo_name
-twitter_handle
-linkedin_username
-email
-email_client
-project_title
-project_description
-logo_fullpath
--->
-
 <div align="center">
 
 [![Contributors][contributors-shield]][contributors-url]
@@ -36,23 +23,23 @@ logo_fullpath
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/github_username/repo_name">
-    <img src="logo_fullpath" alt="Logo" width="80" height="80">
+  <a href="https://github.com/lucas-rossolini/wonder-partners-movies-app">
+    <img src="./src/assets/images/popcorn.png" alt="Logo" width="80" height="80">
   </a>
 
-<h3 align="center">project_title</h3>
+<h3 align="center">Wonder Patners Movies App</h3>
 
   <p align="center">
-    project_description
+    This project is a technical test as part of my interview for a developer position at Wonder Partners.
     <br />
-    <a href="https://github.com/github_username/repo_name"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/lucas-rossolini/wonder-partners-movies-app"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/github_username/repo_name">View Demo</a>
+    <a href="https://github.com/lucas-rossolini/wonder-partners-movies-app">View Demo</a>
     ·
-    <a href="https://github.com/github_username/repo_name/issues">Report Bug</a>
+    <a href="https://github.com/lucas-rossolini/wonder-partners-movies-app/issues">Report Bug</a>
     ·
-    <a href="https://github.com/github_username/repo_name/issues">Request Feature</a>
+    <a href="https://github.com/lucas-rossolini/wonder-partners-movies-app/issues">Request Feature</a>
   </p>
 </div>
 
@@ -89,14 +76,26 @@ logo_fullpath
 
 ## Built With
 
-- [Next.js](https://nextjs.org/)
 - [React.js](https://reactjs.org/)
-- [Vue.js](https://vuejs.org/)
-- [Angular](https://angular.io/)
-- [Svelte](https://svelte.dev/)
-- [Laravel](https://laravel.com)
-- [Bootstrap](https://getbootstrap.com)
-- [JQuery](https://jquery.com)
+  React is a javascript library ideal for creating interactive user interfaces. Based on the use of components, when data is modified, React updates only the components that need it.
+
+Each component can work independently or be assembled with other components to create a complex application.
+
+- [Axios](https://axios-http.com/)
+  Axios is a library for sending Ajax requests, more advanced than Fetch.
+
+Fetch has the advantage of being natively available on all modern browsers, but axios simplifies the developer's task, by providing :
+
+• automatic transformation of JavaScript objects into JSON and vice versa,
+• better error handling mechanisms.
+
+- [Fuse](https://fusejs.io/)
+  Fuse.js is a powerful, lightweight fuzzy-search library, with zero dependencies.
+  With Fuse.js, we don’t need to setup a dedicated backend just to handle search.
+
+- [Tailwind CSS](https://tailwindcss.com/)
+  Tailwind is a CSS framework that can be used to create any design directly in the markup. Mobile-first oriented, it allows to set up responsive interfaces very simply and quickly.
+  Tailwind automatically removes the CSS that is not used during the build, ensuring the lightest possible CSS.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -177,7 +176,7 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 - [] Feature 3
   - [] Nested Feature
 
-See the [open issues](https://github.com/github_username/repo_name/issues) for a full list of proposed features (and known issues).
+See the [open issues](https://github.com/lucas-rossolini/wonder-partners-movies-app/issues) for a full list of proposed features (and known issues).
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -222,9 +221,9 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 ## Contact
 
-Your Name - [@twitter_handle](https://twitter.com/twitter_handle) - email@email_client.com
+Lucas Rossolini - [@cebonvieuxRosso](https://twitter.com/cebonvieuxRosso) - lucas.rossolini@gmail.com
 
-Project Link: [https://github.com/github_username/repo_name](https://github.com/github_username/repo_name)
+Project Link: [https://github.com/lucas-rossolini/wonder-partners-movies-app](https://github.com/lucas-rossolini/wonder-partners-movies-app)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -243,16 +242,16 @@ Project Link: [https://github.com/github_username/repo_name](https://github.com/
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 
-[contributors-shield]: https://img.shields.io/github/contributors/github_username/repo_name.svg?style=for-the-badge
-[contributors-url]: https://github.com/github_username/repo_name/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/github_username/repo_name.svg?style=for-the-badge
-[forks-url]: https://github.com/github_username/repo_name/network/members
-[stars-shield]: https://img.shields.io/github/stars/github_username/repo_name.svg?style=for-the-badge
-[stars-url]: https://github.com/github_username/repo_name/stargazers
-[issues-shield]: https://img.shields.io/github/issues/github_username/repo_name.svg?style=for-the-badge
-[issues-url]: https://github.com/github_username/repo_name/issues
-[license-shield]: https://img.shields.io/github/license/github_username/repo_name.svg?style=for-the-badge
-[license-url]: https://github.com/github_username/repo_name/blob/main/LICENSE
+[contributors-shield]: https://img.shields.io/github/contributors/lucas-rossolini/wonder-partners-movies-app.svg?style=for-the-badge
+[contributors-url]: https://github.com/lucas-rossolini/wonder-partners-movies-app/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/lucas-rossolini/wonder-partners-movies-app.svg?style=for-the-badge
+[forks-url]: https://github.com/lucas-rossolini/wonder-partners-movies-app/network/members
+[stars-shield]: https://img.shields.io/github/stars/lucas-rossolini/wonder-partners-movies-app.svg?style=for-the-badge
+[stars-url]: https://github.com/lucas-rossolini/wonder-partners-movies-app/stargazers
+[issues-shield]: https://img.shields.io/github/issues/lucas-rossolini/wonder-partners-movies-app.svg?style=for-the-badge
+[issues-url]: https://github.com/lucas-rossolini/wonder-partners-movies-app/issues
+[license-shield]: https://img.shields.io/github/license/lucas-rossolini/wonder-partners-movies-app.svg?style=for-the-badge
+[license-url]: https://github.com/lucas-rossolini/wonder-partners-movies-app/blob/main/LICENSE
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/linkedin_username
+[linkedin-url]: https://linkedin.com/in/lucas-rossolini
 [product-screenshot]: images/screenshot.png
