@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/lucas-rossolini/wonder-partners-movies-app/static/css/main.d382e608.css",
+    "main.js": "/lucas-rossolini/wonder-partners-movies-app/static/js/main.d66bf570.js",
+    "static/media/popcorn.png": "/lucas-rossolini/wonder-partners-movies-app/static/media/popcorn.0d345f9cfb40ed1176ae.png",
+    "index.html": "/lucas-rossolini/wonder-partners-movies-app/index.html",
+    "main.d382e608.css.map": "/lucas-rossolini/wonder-partners-movies-app/static/css/main.d382e608.css.map",
+    "main.d66bf570.js.map": "/lucas-rossolini/wonder-partners-movies-app/static/js/main.d66bf570.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d382e608.css",
+    "static/js/main.d66bf570.js"
+  ]
+}
