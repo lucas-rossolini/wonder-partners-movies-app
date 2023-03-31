@@ -1,6 +1,6 @@
 import React from "react";
 
-const Searchbar = function Searchbar({ isFocus }) {
+const Searchbar = function Searchbar({ isFocus, onChange }) {
   return (
     <div className="max-w-md mx-7">
       <div className="relative flex items-center w-full h-11 rounded-2xl focus-within:shadow-lg bg-gray-500 overflow-hidden mt-12">
@@ -10,6 +10,7 @@ const Searchbar = function Searchbar({ isFocus }) {
           id="search"
           placeholder="Search"
           autoFocus={isFocus}
+          onChange={onChange}
         />
         <div className="grid place-items-center h-full w-12 text-gray-300 pr-4">
           <svg

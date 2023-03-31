@@ -70,7 +70,7 @@ const Home = function Home() {
       />
 
       {modal.show ? (
-        <Modal item={modal} bgHide={bgHideModal} defaultPic={defaultPic} />
+        <Modal item={modal} bgHide={bgHideModal} defaultPic={defaultPic} showModal={showModal} />
       ) : null}
     </>
   );
