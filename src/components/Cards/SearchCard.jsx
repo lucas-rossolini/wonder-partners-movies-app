@@ -18,11 +18,11 @@ const SearchCard = function SearchCard({ movie, defaultPic, onClick }) {
         onError={addDefaultPic}
       />
       <div className="flex flex-col justify-between ml-3">
-        <span className="text-ellipsis max-w-full ">{movie.title}</span>
-        <div className="flex flex-col flex-nowrap">
-          <div className="flex items-center "><TicketIcon className="block h-4 w-4 mx-1 text-xs" aria-hidden="true" /> {movie.type}</div>
-          <div className="flex items-center"><CalendarIcon className="block h-4 w-4 mx-1 text-xs" aria-hidden="true" /> {movie.date}</div>
-          <div className="flex items-center"><ClockIcon className="block h-4 w-4 mx-1 text-xs" aria-hidden="true" /> {movie.duration} Minutes</div>
+        <span className="text-ellipsis max-w-full font-normal text-base" style={{fontFamily: "Poppins"}}>{movie.title}</span>
+        <div className="flex flex-col flex-nowrap font-normal text-xs " style={{fontFamily: "Poppins"}}>
+          <div className="flex items-center pb-1"><TicketIcon className="block h-4 w-4 mx-1" aria-hidden="true" /> {movie.type}</div>
+          <div className="flex items-center pb-1"><CalendarIcon className="block h-4 w-4 mx-1" aria-hidden="true" /> {movie.date}</div>
+          <div className="flex items-center pb-1"><ClockIcon className="block h-4 w-4 mx-1" aria-hidden="true" /> {movie.duration} Minutes</div>
         </div>
       </div>
     </div>

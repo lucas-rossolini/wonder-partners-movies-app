@@ -59,21 +59,21 @@ const Modal = function Modal({ item, defaultPic, bgHide, showModal }) {
 
   return (
     <div
-      className="fixed inset-0 z-10 flex items-center justify-center py-28 min-h-screen"
+      className="fixed inset-0 z-10 flex items-center justify-center w-screen py-28 min-h-screen"
       type="button"
     >
       <div
         className="absolute inset-0 w-full h-full bg-gray-700 opacity-20"
         ref={popup}
       />
-      <div className="z-10 w-screen h-screen max-w-xl  overflow-x-hidden bg-DarkGray shadow-xl text-white">
+      <div className="z-10 w-screen h-screen overflow-x-hidden bg-DarkGray shadow-xl text-white">
         <ChevronLeftIcon
           className="block h-6 w-6 font-medium absolute ml-6 mt-14"
           aria-hidden="true"
           onClick={() => bgHide()}
         />
         <div className="flex flex-row pt-14 justify-center">
-          <div className="text-xl font-medium flex">{item.type}</div>
+          <div className="text-base font-medium flex">{item.type}</div>
         </div>
         {/* <div className="w-full h-px my-6 bg-gray-200" /> */}
         {item.type === "Details" ? (
@@ -94,10 +94,10 @@ const Modal = function Modal({ item, defaultPic, bgHide, showModal }) {
                   onError={addDefaultPic}
                 />
 
-                <div className="p-3">{data.title}</div>
+                <div className="p-3 text-lg font-semibold" style={{fontFamily: "Poppins"}}>{data.title}</div>
               </div>
             </div>
-            <div className="w-screen flex justify-center items-center mt-4 text-LightGray text-xs">
+            <div className="flex justify-center items-center mt-4 text-LightGray text-xs" style={{fontFamily: "Poppins"}}>
               <CalendarIcon className="block h-4 w-4 mx-1" aria-hidden="true" />
               {data.date} |
               <ClockIcon
@@ -109,8 +109,8 @@ const Modal = function Modal({ item, defaultPic, bgHide, showModal }) {
               {data.type}
             </div>
             <div className="mt-6 mx-7">
-              <h3>About Movie</h3>
-              <p className="mt-6"> {data.description} </p>
+              <h3 className="border-b-4 w-fit pb-2 text-sm font-medium">About Movie</h3>
+              <p className="mt-6 text-xs font-normal" style={{fontFamily: "Poppins"}}> {data.description} </p>
             </div>
           </>
         ) : (

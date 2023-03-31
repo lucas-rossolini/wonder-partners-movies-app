@@ -2,10 +2,10 @@ import React from "react";
 
 const Searchbar = function Searchbar({ isFocus, onChange }) {
   return (
-    <div className="max-w-md mx-7">
-      <div className="relative flex items-center w-full h-11 rounded-2xl focus-within:shadow-lg bg-gray-500 overflow-hidden mt-12">
+    <div className="mx-7">
+      <div className="relative flex items-center w-full h-11 rounded-2xl focus-within:shadow-lg bg-LightGray overflow-hidden mt-12">
         <input
-          className="peer h-full w-full outline-none text-sm text-gray-700 pl-6 bg-gray-500"
+          className="peer h-full w-full outline-none text-sm text-gray-900 pl-6 bg-LightGray"
           type="text"
           id="search"
           placeholder="Search"

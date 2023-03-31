@@ -54,7 +54,7 @@ const Home = function Home() {
 
   return (
     <>
-      <h1 className="mt-11 ml-6">What do you want to watch?</h1>
+      <h1 className="mt-11 ml-6 text-lg font-semibold" style={{fontFamily: "Poppins"}}>What do you want to watch?</h1>
       <div onClick={() => showModal(moviesList, "Search")}>
         <Searchbar />
       </div>
