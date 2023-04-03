@@ -35,7 +35,7 @@
     <a href="https://github.com/lucas-rossolini/wonder-partners-movies-app"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/lucas-rossolini/wonder-partners-movies-app">View Demo</a>
+    <a href="https://lucas-rossolini.github.io/wonder-partners-movies-app">View Demo</a>
     ·
     <a href="https://github.com/lucas-rossolini/wonder-partners-movies-app/issues">Report Bug</a>
     ·
