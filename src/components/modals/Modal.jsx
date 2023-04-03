@@ -1,6 +1,7 @@
 import { useRef, useState, useEffect } from "react";
 import Fuse from "fuse.js";
 import SearchCard from "../Cards/SearchCard";
+import defaultCover from "../../assets/images/theater.jpeg"
 
 import {
   ChevronLeftIcon,
@@ -10,13 +11,14 @@ import {
 } from "@heroicons/react/24/outline";
 import Searchbar from "../inputs/Searchbar";
 
-const Modal = function Modal({ item, defaultPic, bgHide, showModal }) {
+const Modal = function Modal({ item, defaultPic, bgHide, showModal, theater }) {
   const popup = useRef();
 
   const { data } = item;
 
   const [searchData, setSearchData] = useState([]);
   const [noResult, setNoResult] = useState(false);
+  const [isLoaded, setIsLoaded] = useState(false);
 
   const searchItem = (query) => {
     if (!query) {
@@ -57,6 +59,22 @@ const Modal = function Modal({ item, defaultPic, bgHide, showModal }) {
     e.target.src = defaultPic;
   }
 
+function checkImage (src, loaded, notFound) {
+  var img = new Image();
+  img.onload = loaded;
+  img.onerror = notFound;
+  img. src = src;
+}
+
+const coverBackgound = checkImage(data.cover, function(){ setIsLoaded(true); }, function(){ setIsLoaded(false); });
+
+const setCoverUrl = () => {
+  if (isLoaded) {
+    return data.cover
+  }
+  else return defaultCover
+}
+
   return (
     <div
       className="fixed inset-0 z-10 flex items-center justify-center w-screen py-28 min-h-screen"
@@ -82,7 +100,7 @@ const Modal = function Modal({ item, defaultPic, bgHide, showModal }) {
               <div
                 className="h-52 w-auto rounded-b-2xl mt-5"
                 style={{
-                  backgroundImage: `url(${data.cover})`,
+                  backgroundImage: `url(${setCoverUrl()})`,
                   backgroundSize: "cover",
                 }}
               ></div>

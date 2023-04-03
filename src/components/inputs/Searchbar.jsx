@@ -3,9 +3,9 @@ import React from "react";
 const Searchbar = function Searchbar({ isFocus, onChange }) {
   return (
     <div className="mx-7">
-      <div className="relative flex items-center w-full h-11 rounded-2xl focus-within:shadow-lg bg-LightGray overflow-hidden mt-12">
+      <div className="relative flex items-center w-full h-11 rounded-2xl focus-within:shadow-lg bg-gray-200 overflow-hidden mt-12">
         <input
-          className="peer h-full w-full outline-none text-sm text-gray-900 pl-6 bg-LightGray"
+          className="peer h-full w-full outline-none text-sm text-gray-900 pl-6 bg-gray-200"
           type="text"
           id="search"
           placeholder="Search"
