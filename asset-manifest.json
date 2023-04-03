@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/wonder-partners-movies-app/static/css/main.76aec215.css",
-    "main.js": "/wonder-partners-movies-app/static/js/main.23161f24.js",
+    "main.js": "/wonder-partners-movies-app/static/js/main.e7697db0.js",
     "static/media/theater.jpeg": "/wonder-partners-movies-app/static/media/theater.3c83718adc007efdc3db.jpeg",
     "static/media/popcorn.png": "/wonder-partners-movies-app/static/media/popcorn.0d345f9cfb40ed1176ae.png",
     "index.html": "/wonder-partners-movies-app/index.html",
     "main.76aec215.css.map": "/wonder-partners-movies-app/static/css/main.76aec215.css.map",
-    "main.23161f24.js.map": "/wonder-partners-movies-app/static/js/main.23161f24.js.map"
+    "main.e7697db0.js.map": "/wonder-partners-movies-app/static/js/main.e7697db0.js.map"
   },
   "entrypoints": [
     "static/css/main.76aec215.css",
-    "static/js/main.23161f24.js"
+    "static/js/main.e7697db0.js"
   ]
 }
