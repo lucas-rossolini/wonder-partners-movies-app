@@ -12,7 +12,7 @@ const SearchCard = function SearchCard({ movie, defaultPic, onClick }) {
   return (
     <div className="flex pr-7 mt-5 ml-7" onClick={() => onClick()}>
       <img
-        className="w-24 h-36 min-w-fit max-w-min overflow-hidden rounded-2xl hover:shadow-xl transition-shadow duration-300 ease-in-out"
+        className="w-24 h-36 min-w-fit max-w-fit overflow-hidden rounded-2xl hover:shadow-xl transition-shadow duration-300 ease-in-out"
         src={movie.thumbnail}
         alt={`${movie.title} thumbnail`}
         onError={addDefaultPic}

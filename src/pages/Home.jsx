@@ -7,6 +7,7 @@ import VerticalCards from "../components/lists/VerticalCards";
 import Modal from "../components/modals/Modal";
 
 import defaultPic from "../assets/images/default-movie.png";
+import theater from "../assets/images/theater.jpeg";
 
 const Home = function Home() {
   const [moviesList, setMoviesList] = useState([]);
@@ -42,6 +43,7 @@ const Home = function Home() {
       type: modalType,
       show: true,
     });
+    document.body.style.overflow = 'hidden';
   };
 
   const bgHideModal = () => {
@@ -50,6 +52,7 @@ const Home = function Home() {
       type: "",
       show: false,
     });
+    document.body.style.overflow = 'unset';
   };
 
   return (
@@ -70,7 +73,7 @@ const Home = function Home() {
       />
 
       {modal.show ? (
-        <Modal item={modal} bgHide={bgHideModal} defaultPic={defaultPic} showModal={showModal} />
+        <Modal item={modal} bgHide={bgHideModal} defaultPic={defaultPic} showModal={showModal} theater={theater} />
       ) : null}
     </>
   );

@@ -1,8 +1,8 @@
 {
-  "homepage": "https://github.com/lucas-rossolini/wonder-partners-movies-app/",
+  "homepage": "https://lucas-rossolini.github.io/wonder-partners-movies-app",
   "name": "movies-app",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "dependencies": {
     "@heroicons/react": "^2.0.16",
     "@testing-library/jest-dom": "^5.14.1",
